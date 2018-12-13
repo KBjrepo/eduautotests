@@ -18,7 +18,7 @@ class DogsSearch {
         searchInput.value = searchRequest
         searchInput.pressEnter()
 
-        def found = $$(By.xpath(".//*[text()='Dog']/.."))
+        def found = $$("h2.organic__title-wrapper")
         assert found.size() > 0
         assert found.first().text.contains(searchRequest)
     }
